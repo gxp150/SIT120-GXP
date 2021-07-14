@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Inheritance example</title>
+    <style>
+      body {
+        font-family: "Opensans";
+      }
+      p {
+        font-size: 0.9em;
+      }
+      div {
+        border-style: dashed;
+      }
+      #span1 {
+        /* Uncomment the line below and see what the effect is IT BOXES THE SECOND TIER WITHIN THE FIRST*/
+        /* border-style: inherit; */
+      }
+      #span2 {
+        font-family: Opensans;
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      This is some text inside the div but outside the span.
+      <span id="span1">This is some text inside the span</span> This is some
+      text inside the div but outside the span
+    </div>
+    <p>
+      This is some text inside the p but outside the span.
+      <span id="span2">This is some text inside the span</span> This is some
+      text inside the p but outside the span
+    </p>
+  </body>
+</html>

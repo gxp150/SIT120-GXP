@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borders and Padding</title>
+    <style>
+      .boxDiv {
+        background-color: rgb(2, 54, 61);
+        padding: 7px;
+        margin: 5px;
+        border: solid 2px rgb(3, 83, 94);
+      }
+      div {
+        font-style: normal;
+        font-family: opensans;
+        color: white;
+      }
+
+      .inlineSpan {
+        background-color: rgb(6, 124, 140);
+        /* uncomment these and see what happens */
+        /*
+            padding: 5px;
+            margin: 5px;
+            */
+        border: solid 2px rgb(250, 250, 250);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxDiv">Some div text</div>
+    <div class="boxDiv">Some more div text</div>
+    <div class="boxDiv">
+      Lots and lots and lots and lots and lots and lots and lots and lots and
+      lots and lots and lots and lots and lots and lots and lots and lots and
+      lots and lots and lots and lots and lots and lots and lots and lots and
+      lots and lots and lots and lots of div text
+    </div>
+    <span class="inlineSpan"> Some span text </span>
+    <span class="inlineSpan"> Some more span text but a bit longer </span>
+    <br />
+    <span class="inlineSpan"> A little more span text </span>
+    <span class="inlineSpan">
+      Lots and lots and lots and lots and lots and lots and lots and lots and
+      lots and lots and lots and lots and lots and lots and lots and lots and
+      lots and lots and lots and lots and lots and lots and lots and lots and
+      lots and lots and lots and lots of span text
+    </span>
+    <span class="inlineSpan"> A little more span text to finish off </span>
+  </body>
+</html>

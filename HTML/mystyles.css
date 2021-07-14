@@ -1,0 +1,6 @@
+/* style 'all paragraphs' as follows */
+p {
+  margin-left: 5em;
+  margin-right: 5em;
+  color: #36454f;
+}
