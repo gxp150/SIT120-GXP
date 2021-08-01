@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 - SIT120 - Practical Exercises</title>
+    <link rel="stylesheet" href="prac_styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <div class="h1"><h1>JavaScript Weekly Notes</h1></div>
+      <p>
+        Javascript Functions - VAR - declares global variable (not recommended
+        to use this method as when you make a change you don’t know exactly
+        where it has effected)
+      </p>
+      <p>
+        JavaCript Object Notation, JSON is text, written with JavaScript object
+        notation
+      </p>
+      <p>The length property returns the length of a string:</p>
+      <p>
+        So no matter how long your string is the function will automatically
+        count all the characters for you and provide a summary
+      </p>
+      <h2>The result is:</h2>
+      <p id="demo"></p>
+      <br />
+
+      <div class="h2"><h2>Now lets try a toString()</h2></div>
+      <p>
+        This will return the total but as a string not an integer. A string is
+        identified in '' an integer is not
+      </p>
+      <p id="demo2"></p>
+      <br />
+
+    <script>
+      let text = "introtoresponsivewebapps";
+      document.getElementById("demo").innerHTML = text.length;
+
+      let str = "What day is it";
+      document.getElementById("demo2").innerHTML = str.toString();
+
+
+    </script>
+  </body>
+</html>
