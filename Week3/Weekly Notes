@@ -1,0 +1,73 @@
+Week 3 Notes Tips and Credits for images used in site (to be added where it is meant to go)
+Week 3 - Reflection
+Tutorial from Udemy 
+HTML5 & CSS Development: Learn How to Build a Professional Website | Udemy, Jordan Hudgens
+
+
+
+
+
+
+• Overview of Jquery and AJAX not essential for this unit but good to know
+
+Javascript
+Functions - 
+VAR - declares global variable (not recommended to use this method as when you make a change you don’t know exactly where it has effected)
+
+LET - declares local variable
+
+Const - declares read only variable
+
+IF STATEMENTS
+Three Equals === means it must equal no variation this will check data type as well as item (integer etc)
+IF, Else, Return
+
+VALIDATION/ERROR
+Try, Catch
+
+Summary: these conventions are very similar to the methods used in Python, concatenate the same, just little differences such as the === and 'catch' in the try statement. Arrays are slightly different with PUSH method and filters.
+
+DOM - Document Object Model
+
+JSON - JavasScript 1010
+JavaCript Object Notation, JSON is text, written with JavasScript object notation
+JSON is a syntax for storing and exchanging data.
+Jquery DOM manipulation
+Jquery AJAX = Asynchronous JavaScript and XML. AJAX is about loading data in the background and display it on the webpage, without reloading the whole page.
+
+
+Black background: Credit: <a href="https://www.vecteezy.com/free-vector/gradient-background">Gradient Background Vectors by Vecteezy</a>
+
+BlackYellow Image (unsplash) Photo by Fakurian Design on Unsplash 
+
+
+Credits: 
+AirCon 1 Photo by Etwin Kyo on Unsplash 
+AirCon 2 Photo by Etwin Kyo on Unsplash 
+AirCon 3 Photo by Etwin Kyo on Unsplash 
+AirCon 4 Photo by Raychan on Unsplash 
+AirCon 5 Photo by Vlad Zaytsev on Unsplash 
+AirCon 6 Photo by Image by bstad from Pixabay
+<a href="https://pixabay.com/users/bstad-3630924/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2063432">bstad</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2063432">Pixabay</a>
+
+Refrig 1 Image by <a href="https://pixabay.com/users/bstad-3630924/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2063432">bstad</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2063432">Pixabay</a>
+
+Refrig 2 Image by <a href="https://pixabay.com/users/hpgruesen-2204343/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2560454">Erich Westendarp</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2560454">Pixabay</a>
+
+Refrig 3 Image by <a href="https://pixabay.com/users/elasticcomputefarm-1865639/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1185041">ElasticComputeFarm</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1185041">Pixabay</a>
+
+Refrig 4 Image by <a href="https://pixabay.com/users/elasticcomputefarm-1865639/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3629396">ElasticComputeFarm</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3629396">Pixabay</a>
+
+Refrig 5 Image by <a href="https://pixabay.com/users/artisticoperations-4161274/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5295550">F. Muhammad</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5295550">Pixabay</a>
+
+Refrig 6 Photo by Michal Matlon on Unsplash 
+
+Building Mono: Photo by Osman Rana on Unsplash 
+
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+.active-nav-link a {
+  color: black !important;
+}
