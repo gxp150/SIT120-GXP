@@ -1,0 +1,18 @@
+Week 4 
+
+
+
+Task
+	1. Load a web page from the net or intranet into a web browser -
+	2. View the source code for a web page in the browser
+	3. Discuss the UX/UI design and components of a web application. The actual interface of the application, how it pleases the eye of the user and how the user is able to interact with the application.
+	4. Describe HTTP requests and responses. How data is exchanged from the server and a client, client can trigger responses and send requests. A server can respond and process. HTTP requests provide the suitable action response. This uses the TRANSPORT layer.
+	5. Distinguish between the way a web server processes static web pages and dynamic web pages. Best way to think of a static web page is that its frozen and nothing will happen until the user makes it happen by pressing something. Dynamic web pages are more fluid and utilise multiple languages to achieve this effect of a living/interactive page.
+	6. Name the five major web browsers: Chrome, Firefox, Edge, Internet Explorer, Safari
+	7. Describe the use of JavaScript: This is one of the main languages that enable web developers to make sites and applications interactive - bring pages to life, providing a greater experience for the end user.
+	8. Distinguish between HTML and CSS - To put this in a simple way think of the HTML as the core structure/skeleton the 'house' for example and the CSS is the 'interior design' and 'landscaping'  you had to the house.
+
+Search Bar: You can use 'focus-within' to create a expanding/retracting search bar in CSS
+CSS is best in Firefox you have more Developer functionality
+
+https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
