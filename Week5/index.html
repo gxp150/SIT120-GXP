@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="prac_styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5</title>
+  </head>
+  <body>
+    <div class="row">
+      <div id="app">
+        <p v-if="show">
+          Conditional Rendering example Wk5<br /><span>Greetings Friend</span>
+        </p>
+        <template v-if="show"
+          ><h1>Week 5 Head</h1>
+          <p>Inside a template</p>
+        </template>
+        <p v-else>Do you also see?</p>
+        <button @click="show = !show" class="button">Switch</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

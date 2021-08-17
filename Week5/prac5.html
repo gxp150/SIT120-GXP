@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <p v-bind:title="message">{{message}}</p>
+      <ol>
+        <li v-for="whatever in todos">{{whatever.item}}</li>
+      </ol>
+
+      <ol>
+        <todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
+      </ol>
+      <p>
+        <button v-on:click="increaseAnddecrease">increase</button
+        >{{count}}<br />
+        {{pointer}}
+      </p>
+    </div>
+
+    <script>
+      Vue.component("todo-item", {
+        props: ["todo"],
+        template: "<li>{{todo}}</li>",
+      });
+
+      Vue.component("counter", {
+        props: ["counter", "pointer"],
+        template:
+          "<button v-on:click='counter ++; pointer -->{{counter}}{{pointer}}</button>",
+        data: function () {
+          return {
+            counter: 0,
+            pointer: 0,
+          };
+        },
+      });
+
+      var anExample = new Vue({
+        el: "#app",
+        data: {
+          message: "this is a test",
+          todos: [
+            { key: 1, item: "item1" },
+            { key: 2, item: "item2" },
+            { key: 3, item: "item3" },
+          ],
+          count: 0,
+          pointer: 0,
+        },
+        methods: {
+          increaseAnddecrease: function () {
+            this.count++;
+            this.pointer--;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
