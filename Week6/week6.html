@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="prac_styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 6 Practice</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <p v-bind:title="test">Its a wild n windy Wednesday</p>
+      <h1>Week 6</h1>
+      <h2>
+        Finds us playing with form features including check boxes, inputs and
+        form values
+      </h2>
+      <br />
+      <input type="text" v-model.lazy="message" placholder="input sth" />
+      <br />
+      <p>Message is: {{ message }}</p>
+      <br />
+      <br />
+      <span>Multiline message is: </span>
+      <p style="white-space: pre-line">{{ anothermessage }}</p>
+      <br />
+      <textarea
+        v-model="anothermessage"
+        placeholder="add multiple lines"
+      ></textarea>
+      <br />
+      <br />
+
+      <input type="radio" id="one" value="One" v-model="picked" />
+      <label for="one">One</label>
+      <br />
+      <input type="radio" id="two" value="Two" v-model="picked" />
+      <label for="two">Two</label>
+      <br />
+      <span> Picked: {{ picked }}</span>
+
+      <br />
+      <br />
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames1" />
+      <label for="jack">Jack</label>
+      <input
+        type="checkbox"
+        id="daniels"
+        value="Daniels"
+        v-model="checkedNames2"
+      />
+      <label for="daniels">Daniels</label>
+      <input type="checkbox" id="lives" value="Lives" v-model="checkedNames3" />
+      <label for="lives">Lives</label>
+      <input type="checkbox" id="here" value="Here" v-model="checkedNames4" />
+      <label for="here">Here</label>
+      <br />
+      <br />
+      <span
+        >Checked names: {{ checkedNames1 }}{{ checkedNames2 }} {{ checkedNames3
+        }} {{ checkedNames4 }}
+      </span>
+      <br />
+      <br />
+      <select v-model="forselect">
+        <option v-for="i in options" v-bind:value="i.value">
+          {{ i.text }}
+        </option>
+      </select>
+      <span>Selected: {{ forselect }}</span>
+      <br />
+      <br />
+      <select v-model="selected">
+        <option disabled value="">Please select one</option>
+        <option value="Jack">Jack</option>
+        <option value="Daniels">Daniels</option>
+        <option value="Lives">Lives</option>
+        <option value="Here">Here</option>
+      </select>
+      <br />
+
+      <br />
+      <span>Selected: {{ selected }} </span>
+      <br />
+      <br />
+      <input type="radio" v-model="pick" v-bind:value="a" />
+      <span>Picked: {{ pick }}</span>
+      <br />
+      <br />
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          test: "this is week 6 practice",
+          message: "",
+          anothermessage: "",
+          picked: "",
+          checkedNames1: "",
+          checkedNames2: "",
+          checkedNames3: "",
+          checkedNames4: "",
+          selected: "",
+          forselect: "",
+          options: [
+            { text: "one", value: "Jack" },
+            { text: "two", value: "Jim" },
+            { text: "three", value: "Johnny" },
+            { text: "four", value: "Jameson" },
+          ],
+          pick: "",
+          a: "Jim Beam",
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+/* master styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: rgb(4, 77, 90);
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  color: #404040;
+}
