@@ -1,0 +1,50 @@
+/* master styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: rgb(4, 77, 90);
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  color: #404040;
+}
+
+h3 {
+  color: rgb(4, 77, 90);
+}
+.posts-sidebar {
+  max-width: 40vw;
+  margin: 0;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+  border-right: 1px solid #404040;
+}
+.posts-sidebar li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+.posts-sidebar li:hover {
+  background: #eee;
+}
+.posts-sidebar li:selected {
+  background: rgba(7, 153, 179, 0.235);
+}
+.selected-post-container {
+  padding-left: 10px;
+}
+.selected-post > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.example-7-color-preview {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}

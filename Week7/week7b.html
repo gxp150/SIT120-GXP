@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7 - Custom Events Dyanmic/Async</title>
+    <!--add keep alive components suggested to add this to assignment (website)-->
+
+    <link rel="stylesheet" href="prac_styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="dynamic-component-demo" class="demo">
+      <button
+        v-for="tab in tabs"
+        v-bind:key="tab"
+        :class="['tab-button', { active: currentTab === tab }]"
+        v-on:click="currentTab = tab"
+      >
+        {{ tab }}
+      </button>
+
+      <keep-alive>
+        <component v-bind:is="currentTabComponent" class="tab"></component>
+      </keep-alive>
+    </div>
+
+    <script>
+      Vue.component("tab-posts", {
+        data: function () {
+          // Create our list/tabs and descriptions, ID is the key
+          return {
+            posts: [
+              {
+                id: 1,
+                title: "First Item",
+                content:
+                  "<p> Here is some random test for the first paragraph section in our tab list, which is in our array</p>",
+              },
+              {
+                id: 2,
+                title: "Second Item",
+                content:
+                  "<p> Here is some random test for the second paragraph section in our tab list, which is in our array</p>",
+              },
+              {
+                id: 3,
+                title: "Third Item",
+                content:
+                  "<p> Here is some random test for the third paragraph section in our tab list, which is in our array</p>",
+              },
+              {
+                id: 4,
+                title: "Fourth Item",
+                content:
+                  "<p> Here is some random test for the fourth paragraph section in our tab list, which is in our array</p>",
+              },
+            ],
+            selectedPost: null,
+          };
+        },
+        // Back ticks use them (located next to your 1 on the top number keyboard as they lead to less errors using "" '' in the following
+        // === strict equals comparison
+        template: `
+            <div class="posts-tab">
+                <ul class="posts-sidebar">
+                    <li
+                    v-for="post in posts"
+                    v-bind:key="post.id"
+                    v-bind:class="{ selected: post === selectedPost }"
+                    >
+                        {{ post.title }}
+                    </li>
+                </ul>
+                <div class="selected-post-container">
+                    <div
+                        v-if="selectedPost"
+                        class="selected-post"
+                    >
+                        <h3>{{ selectedPost.title }}</h3>
+                        div v-html="selectedPost.content"></div>
+                    </div>
+                    <strong v-else>
+                        Click on title to the left to view it and find out more random text
+                    </strong>
+                    </div>
+                </div>
+        `,
+      });
+
+      Vue.component("tab-archive", {
+        template: "<div>Archive component</div>",
+      });
+
+      new Vue({
+        el: "#dynamic-component-demo",
+        data: {
+          currentTab: "Posts",
+          tabs: ["Posts", "Archive"],
+        },
+        computed: {
+          // self executing function
+          currentTabComponent: function () {
+            // Lets concatenate which means join everything together and convert to lower case
+            return "tab-" + this.currentTab.toLowerCase();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7 - Local and Global Components</title>
+    <link rel="stylesheet" href="prac_styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--adding some components-->
+      <demo-component
+        v-bind:title="title"
+        v-bind:likes="likes"
+        v-bind:commentids="commentids"
+        v-bind:author="author"
+      ></demo-component>
+
+      <demo-component
+        v-bind:title="post.title"
+        v-bind:likes="post.likes"
+        v-bind:commentids="post.commentids"
+        v-bind:author="post.author"
+      ></demo-component>
+
+      <VueEmoji ref="emoji" @input="onInput" :value="myText"></VueEmoji>
+
+      <component-a></component-a>
+    </div>
+    <script>
+      // Defining the components
+      // Dont forget when naming your Vue components use kebab-case or PascalCase and keep it consistent
+      Vue.component("demo-component", {
+        // Bring in a dynamic prop
+        props: {
+          title: String,
+          likes: Number,
+          commentID: Array,
+          author: Object,
+        },
+        template:
+          // back slashes allow you to create a new line
+          // so your code lines do not become to long
+          // it makes things easier to read
+          "<div><p><demoComponent></demoComponent></p> \
+        <h3> {{title}} likes {{likes}} by {{author.name}}</h3> \
+        <h6></h6> \
+        </div>",
+      });
+
+      Vue.component("demoComponent", {
+        template: "<p>Playing with Components</p>",
+      });
+
+      Vue.component("emoji-vue", {
+        //in component def
+        methods: {
+          onInput(event) {
+            //event.data contains the value of the textarea
+          },
+          clearTextarea() {
+            this.$refs.emoji.clear();
+          },
+        },
+        components: {
+          VueEmoji,
+        },
+      });
+
+      var componentA = {
+        template: "<p>and playing with Props</p>",
+      };
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          title: "SIT120",
+          likes: 13,
+          commentID: [10, 11, 12],
+          author: {
+            name: "Rhonda Jorgensen",
+          },
+
+          post: {
+            title: "It's a random title",
+            likes: 2,
+            commentID: [80, 9, 22],
+            author: {
+              name: "Another Person",
+            },
+          },
+          components: {
+            "component-a": componentA,
+          },
+        },
+        // add keep alive components suggested to add this to our assignment website
+      });
+    </script>
+  </body>
+</html>

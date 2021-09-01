@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7 - Local and Global Components</title>
+    <link rel="stylesheet" href="prac_styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--adding some components-->
+      <demo-component
+        v-bind:title="title"
+        v-bind:likes="likes"
+        v-bind:commentids="commentids"
+        v-bind:author="author"
+        v-on:say-hi="sayHI"
+      ></demo-component>
+
+      <demo-component
+        v-bind:title="post.title"
+        v-bind:likes="post.likes"
+        v-bind:commentids="post.commentids"
+        v-bind:author="post.author"
+        v-on:say-hi="sayHI"
+      ></demo-component>
+
+      <component-a></component-a>
+    </div>
+    <script>
+      // Defining the components
+      // Dont forget when naming your Vue components use kebab-case or PascalCase and keep it consistent
+      Vue.component("demo-component", {
+        // Bring in a dynamic prop
+        props: {
+          title: String,
+          likes: Number,
+          commentID: Array,
+          author: Object,
+        },
+        template:
+          // back slashes allow you to create a new line
+          // so your code lines do not become to long
+          // it makes things easier to read
+          "<div><p><demoComponent></demoComponent></p> \
+        <h3> {{title}} likes the number {{likes}} its {{author.name}}</h3> \
+        <h6></h6> <button v-on:click=\"$emit('say-hi')\">Click me for a suprise</button>\
+        </div>",
+      });
+
+      Vue.component("demoComponent", {
+        template: "<p>Playing with Components</p>",
+      });
+
+      var componentA = {
+        template: "<p>and playing with Props</p>",
+      };
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          title: "WHO",
+          likes: 13,
+          commentids: [10, 11, 12],
+          author: {
+            name: "Rhonda Jorgensen",
+          },
+
+          post: {
+            title: "And who",
+            likes: 2,
+            commentids: [80, 9, 22],
+            author: {
+              name: "Another Person",
+            },
+          },
+        },
+        components: {
+          "component-a": componentA,
+        },
+        methods: {
+          sayHI: function () {
+            alert("Hi you found the pop up - congratulations!!");
+          },
+        },
+        // add keep alive components suggested to add this to our assignment website
+        // Try and work out emoji for fun <VueEmoji ref="emoji" @input="onInput" :value="myText"></VueEmoji>-->
+      });
+    </script>
+  </body>
+</html>
